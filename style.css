@@ -81,7 +81,7 @@
     width: 33%;
     color: white;
     font-size: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .color {
@@ -96,5 +96,14 @@
     color: white;
     font-size: 30px;
     height: 25%;
-    border-radius: 10px;
+    border-radius: 20px;
+}
+
+.num:hover, .ope:hover {
+    background-color: rgb(70, 70, 70);
+    transition: 0.3s;
+}
+
+.color:hover {
+    background-color: rgb(204, 142, 49);
 }
