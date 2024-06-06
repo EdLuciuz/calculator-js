@@ -43,6 +43,16 @@
     font-size: 30px;
     flex-direction: column  ;
     justify-content: space-between;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+
+}
+
+.question::-webkit-scrollbar {
+    display: none; 
 }
 
 .answer {
