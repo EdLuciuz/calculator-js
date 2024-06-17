@@ -8,6 +8,10 @@ const equBtn = document.querySelector("#operate")
 let display = ''
 
 function operate() {
+    if (display == '') {
+        result = 0
+    }
+
     if (display.includes('+')) {
         displayArray = display.split('+')
         result = parseFloat(displayArray[0]) + parseFloat(displayArray[1])
@@ -24,6 +28,14 @@ function operate() {
         displayArray = display.split('÷')
         result = displayArray[0] / displayArray[1]
     }
+
+    if (result == "Infinity") {
+        result = 'Math Error'
+    }
+
+    else if (isNaN(result)) {
+        result = 'Syntax Error'
+    }
     console.log(result)
 }
 
@@ -38,6 +50,9 @@ numBtn.forEach((btn) => {
 
 opeBtn.forEach((btn2) => {
     btn2.addEventListener('click', () => {
+        if (display == '') {
+            display = continueAns
+        }
         let opecontent = btn2.textContent
         display += opecontent
         question.textContent = display
@@ -53,6 +68,14 @@ CBtn.addEventListener('click', () => {
 
 equBtn.addEventListener('click', () => {
     operate()
-    answer.textContent = result
+    if (isFinite(result)) {
+        answer.textContent = parseFloat(result.toFixed(7))
+        continueAns = result
+    }
+
+    else if (!isFinite(result)) {
+        answer.textContent = result
+        continueAns = 0
+    }
     display = ''
 })

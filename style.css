@@ -94,11 +94,6 @@
     border-radius: 20px;
 }
 
-.color {
-    background-color: rgb(255, 176, 58);
-    font-weight: 700;
-}
-
 .ope {
     background-color: rgb(49, 49, 49);
     border: 2px solid black;
@@ -107,6 +102,11 @@
     font-size: 30px;
     height: 25%;
     border-radius: 20px;
+}
+
+.color {
+    background-color: rgb(255, 176, 58);
+    font-weight: 700;
 }
 
 .num:hover, .ope:hover {
